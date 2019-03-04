@@ -2,19 +2,19 @@
 
 struct A
 {
+private:
     int num;
-    int flag;
-    A()
+    bool flag;
+public:
+    A(): flag(false)
     {
-        flag = 0;
         std::cin >> num;
     }
 
-    A(const A &b)
+    A(const A &b) : flag(true)
     {   
         std::cin >> num;
         num += b.num;
-        flag = 1;
     }
 
     ~A()
@@ -26,3 +26,4 @@ struct A
     }
 
 };
+

@@ -11,5 +11,5 @@ int main() {
         sum_sqr += a * a;
     }
     std::cout << std::setprecision(10) << sum / n << std::endl;
-    std::cout << std::setprecision(10) << sqrt(sum_sqr / n - pow(sum / n, 2)) << std::endl;
+    std::cout << std::setprecision(10) << sqrt(sum_sqr / n - (sum / n)*(sum / n)) << std::endl;
 }

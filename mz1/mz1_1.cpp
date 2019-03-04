@@ -2,15 +2,16 @@
 
 struct Sum
 {
+private:
     int sum;
+public:
     Sum() = default;
-    Sum(int a, int b) 
+    Sum(int a, int b): sum (a + b)
     {
-        sum = a + b;
     }
-    operator const int() const
+
+    Sum(const Sum &a, int c): sum (a.sum + c) 
     {
-        return sum;
     }
 
     int get() const 
