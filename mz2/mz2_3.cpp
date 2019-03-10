@@ -250,14 +250,4 @@ namespace numbers
         }
         return +stack;
     }
-
-
-int main(int argc, char **argv)
-{
-    
-    complex z("2.0,0.0");
-    printf("%lf %lf\n", eval(argv, z).get_re(), eval(argv, z).get_im());
-    return 0;
-}
-
 }
