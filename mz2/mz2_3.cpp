@@ -176,7 +176,6 @@ namespace numbers
             {
                 case 'z':
                 {
-                    stack = ~stack;
                     stack = stack << z;
                     break;
                 }
@@ -251,3 +250,4 @@ namespace numbers
         return +stack;
     }
 }
+ 
