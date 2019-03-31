@@ -1,15 +1,46 @@
-#include <iostream>
-struct S {
-	int a + b;
-}
+#include<iostream>
 
-using namespace std;
-void func(S v) {
-	if (v) {
-		func(move(v));
-	}
-}
+class S
+{   
+    bool prnt;
+    bool flag;
+    int a;    
+public:
+    S()
+    {
+        prnt = false;
+        if(std::cin >> a)
+        {   
+            flag = true;
+        } else
+        {
+            flag = false;
+        }
+    }
+    S(S && v)
+    {
+        if(std::cin >> a)
+        {
+            a += v.a;
+            prnt = false;
+            flag = true;
+        } else
+        {   
+            a = v.a;
+            prnt = true;
+            flag = false;
+        }
+    }
+    operator bool()
+    {
+        return flag;
+    }
+    ~S()
+    {
+        if(prnt) {
+            std::cout << a << std::endl;
+        }
+        
+    }
+};
 
-int main() {
-	func(S());
-}
