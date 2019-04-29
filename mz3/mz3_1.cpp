@@ -4,11 +4,16 @@
 void process(const std::vector <int> &from, std::vector <int> &to, int step) {
 
     auto i = to.begin();
-    for (auto it = from.begin(); it < from.end(); it += step, ++i) {
+    auto check = from.begin();
+    for (auto it = from.begin(); it < from.end();  ++i) {
         if (i == to.end()) {
             break;
         }
         *i = *it;
+        it += step;
+        if (it < check) {
+            break;
+        }
         
     }
 
@@ -16,4 +21,3 @@ void process(const std::vector <int> &from, std::vector <int> &to, int step) {
         std::cout << *it << std::endl;
     }
 }
-
